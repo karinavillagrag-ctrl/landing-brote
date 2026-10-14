@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- GOOGLE ANALYTICS AQUÍ -->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FNCLM0E72N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FNCLM0E72N');
+</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Migra tu música y obtén 3 meses gratis</title>
@@ -532,6 +541,16 @@
     <footer>
         <p>&copy; 2027 Spotify AB. Aplican Términos y Condiciones. Oferta válida solo para usuarios que no hayan probado Premium anteriormente.</p>
     </footer>
-
+<script>
+  // Envía el evento clic_cta_principal cuando el visitante hace clic en el CTA
+  document.querySelectorAll('#cta-principal, .cta-principal').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      var seccion = boton.closest('section');
+      gtag('event', 'clic_cta_principal', {
+        ubicacion: seccion && seccion.id ? seccion.id : 'sin_seccion'
+      });
+    });
+  });
+</script>
 </body>
 </html>
